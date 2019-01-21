@@ -72,7 +72,7 @@ class Curve
         if (!\is_null($order)) {
             $mul = $this->mul($point, $order);
             if (!$mul->isInfinity()) {
-                throw new \RuntimeException('SELF * ORDER MUST EQUAL INFINITY. ('.(string) $mul.' found instead)');
+                throw new \RuntimeException('SELF * ORDER MUST EQUAL INFINITY.');
             }
         }
 
@@ -175,7 +175,7 @@ class Curve
         $n = \str_pad(Math::baseConvert(Math::toString($n), 10, 2), $k, '0', STR_PAD_LEFT);
 
         for ($i = 0; $i < $k; ++$i) {
-            $j = $n[$i];
+            $j = \intval($n[$i]);
             Point::cswap($r[0], $r[1], $j ^ 1);
             $r[0] = $this->add($r[0], $r[1]);
             $r[1] = $this->getDouble($r[1]);

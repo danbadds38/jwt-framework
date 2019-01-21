@@ -63,7 +63,7 @@ class KeyCollector implements Collector
                 }
             }
             if (null !== $this->jwksetAnalyzerManager) {
-                $analyzeJWKSet[$kid] = $this->jwksetAnalyzerManager->analyze($jwkset);
+                $analyzeJWKSet[$id] = $this->jwksetAnalyzerManager->analyze($jwkset);
             }
             $data['key']['jwkset'][$id] = [
                 'jwkset' => $cloner->cloneVar($jwkset),

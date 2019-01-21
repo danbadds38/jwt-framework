@@ -33,9 +33,6 @@ class ClaimCheckerManager
         }
     }
 
-    /**
-     * @return ClaimCheckerManager
-     */
     private function add(ClaimChecker $checker): void
     {
         $claim = $checker->supportedClaim();

@@ -53,9 +53,10 @@ class RSASignatureTest extends TestCase
         );
         $serializer = new CompactSerializer(
         );
-        $jwsBuilder = $jwsBuilder->create(['RS256']);
+
         $jws = $jwsBuilder
-            ->create()->withPayload('Live long and Prosper.')
+            ->create()
+            ->withPayload('Live long and Prosper.')
             ->addSignature(
                 $key,
                 [
