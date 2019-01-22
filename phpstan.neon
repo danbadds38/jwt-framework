@@ -1,8 +1,10 @@
 parameters:
     excludes_analyse:
-        - %currentWorkingDirectory%/src/Bundle/*/Tests/*
         - %currentWorkingDirectory%/src/Bundle/*/var/*
         - %currentWorkingDirectory%/src/Component/*/Tests/*
+        - %currentWorkingDirectory%/src/EncryptionAlgorithm/*/Tests/*
+        - %currentWorkingDirectory%/src/Experimental/*/Tests/*
+        - %currentWorkingDirectory%/src/SignatureAlgorithm/*/Tests/*
 
     ignoreErrors:
         - '#Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::children\(\)#'
